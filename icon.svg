@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="flaskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="40%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="512" height="512" rx="112" fill="none" stroke="#38bdf8" stroke-width="6" stroke-opacity="0.3" />
+
+  <!-- Orbital Rings -->
+  <ellipse cx="256" cy="268" rx="190" ry="70" fill="none" stroke="#06b6d4" stroke-width="4" stroke-opacity="0.4" transform="rotate(-30 256 268)" stroke-dasharray="14 8" />
+  <ellipse cx="256" cy="268" rx="190" ry="70" fill="none" stroke="#a855f7" stroke-width="4" stroke-opacity="0.4" transform="rotate(30 256 268)" stroke-dasharray="14 8" />
+
+  <!-- Orbit Electrons -->
+  <circle cx="110" cy="180" r="10" fill="#38bdf8" filter="url(#glow)" />
+  <circle cx="400" cy="355" r="10" fill="#c084fc" filter="url(#glow)" />
+
+  <!-- Flask Body -->
+  <g filter="url(#glow)">
+    <!-- Flask Outline -->
+    <path d="M228 110 L284 110 L284 186 L360 324 C372 346 356 374 330 374 L182 374 C156 374 140 346 152 324 L228 186 Z" 
+          fill="none" stroke="url(#flaskGrad)" stroke-width="18" stroke-linejoin="round" stroke-linecap="round" />
+    
+    <!-- Flask Liquid -->
+    <path d="M192 250 Q224 262 256 250 T320 250 L346 320 C354 336 342 356 324 356 L188 356 C170 356 158 336 166 320 Z" 
+          fill="url(#liquidGrad)" />
+  </g>
+
+  <!-- Flask Neck Lip -->
+  <rect x="216" y="96" width="80" height="18" rx="8" fill="#38bdf8" />
+
+  <!-- Bubbles -->
+  <circle cx="230" cy="300" r="8" fill="#ffffff" fill-opacity="0.7" />
+  <circle cx="280" cy="280" r="12" fill="#ffffff" fill-opacity="0.8" />
+  <circle cx="250" cy="326" r="6" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="256" cy="205" r="9" fill="#22d3ee" fill-opacity="0.75" />
+
+  <!-- CSIR Badge Banner -->
+  <rect x="146" y="408" width="220" height="42" rx="12" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5" />
+  <text x="256" y="435" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="3">CSIR NET</text>
+</svg>
